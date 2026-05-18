@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    android:padding="10dp">
+
+    <!-- Miniature pizza arrondie -->
+    <ImageView
+        android:id="@+id/imgPizza"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true" />
+
+    <!-- Nom de la pizza -->
+    <TextView
+        android:id="@+id/tvNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgPizza"
+        android:layout_toLeftOf="@id/tvRating"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+    <!-- Durée + meta -->
+    <TextView
+        android:id="@+id/tvMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNom"
+        android:layout_toRightOf="@id/imgPizza"
+        android:layout_toLeftOf="@id/tvRating"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#66FFFFFF"
+        android:textSize="11sp" />
+
+    <!-- Rating doré aligné à droite -->
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="4dp"
+        android:textColor="#E8A96A"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

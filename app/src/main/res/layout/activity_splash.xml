@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Image de fond plein écran -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/pizzabg"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
+
+    <!-- Contenu principal centré verticalement -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp">
+
+        <!-- Zone HAUTE : badge + titre -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="20dp">
+
+            <!-- Nom de l'app -->
+            <TextView
+                android:id="@+id/tvAppTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.0"
+                android:text="Pizza\nEL OUATIK"
+                android:textColor="@android:color/white"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <!-- Sous-titre -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HANDCRAFTED WITH LOVE"
+                android:textSize="9sp"
+                android:letterSpacing="0.25"
+                android:textColor="#80FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Ligne décorative dorée -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:background="#E8A96A" />
+
+        </LinearLayout>
+
+        <!-- Zone CENTRALE : image pizza ronde avec halo -->
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal">
+
+        </FrameLayout>
+
+        <!-- Zone BASSE : tagline + bouton + indicateurs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="20dp">
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
